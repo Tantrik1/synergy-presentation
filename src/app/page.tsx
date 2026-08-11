@@ -1,69 +1,77 @@
-import Image from "next/image";
+import { PresentationController } from "@/components/PresentationController";
+
+// Section 1
+import { Slide01_Cover } from "@/components/slides/Slide01_Cover";
+import { Slide02_Agenda } from "@/components/slides/Slide02_Agenda";
+import { Slide03_SituationIntro } from "@/components/slides/Slide03_SituationIntro";
+import { Slide04_Diagnosis } from "@/components/slides/Slide04_Diagnosis";
+import { Slide05_Opportunity } from "@/components/slides/Slide05_Opportunity";
+import { Slide06_OperatingPrinciple } from "@/components/slides/Slide06_OperatingPrinciple";
+
+// Section 2
+import { Slide07_EngineIntro } from "@/components/slides/Slide07_EngineIntro";
+import { Slide08_SixPillarsOverview } from "@/components/slides/Slide08_SixPillarsOverview";
+import { Slide09_Pillar1_SEO } from "@/components/slides/Slide09_Pillar1_SEO";
+import { Slide10_Pillar1B_AEO } from "@/components/slides/Slide10_Pillar1B_AEO";
+import { Slide11_Pillar2_LinkedIn } from "@/components/slides/Slide11_Pillar2_LinkedIn";
+import { Slide12_Pillar3_B2BEmail } from "@/components/slides/Slide12_Pillar3_B2BEmail";
+import { Slide13_AutomationStack } from "@/components/slides/Slide13_AutomationStack";
+import { Slide14_Pillar4_Video } from "@/components/slides/Slide14_Pillar4_Video";
+import { Slide15_SignatureAsset_BrandFilm } from "@/components/slides/Slide15_SignatureAsset_BrandFilm";
+import { Slide16_Pillar5_Reviews } from "@/components/slides/Slide16_Pillar5_Reviews";
+import { Slide17_Pillar6_PaidSocial } from "@/components/slides/Slide17_Pillar6_PaidSocial";
+
+// Section 3
+import { Slide18_LeadDelivery } from "@/components/slides/Slide18_LeadDelivery";
+import { Slide19_ExecutionIntro } from "@/components/slides/Slide19_ExecutionIntro";
+import { Slide20_Roadmap } from "@/components/slides/Slide20_Roadmap";
+import { Slide21_Deliverables } from "@/components/slides/Slide21_Deliverables";
+import { Slide22_Measurement } from "@/components/slides/Slide22_Measurement";
+
+// Section 4
+import { Slide23_InvestmentIntro } from "@/components/slides/Slide23_InvestmentIntro";
+import { Slide24_Phase1_Setup } from "@/components/slides/Slide24_Phase1_Setup";
+import { Slide25_Phase2_Retainer } from "@/components/slides/Slide25_Phase2_Retainer";
+import { Slide26_Phase3_AddOns } from "@/components/slides/Slide26_Phase3_AddOns";
+import { Slide27_Commercials } from "@/components/slides/Slide27_Commercials";
+import { Slide28_WhyMarketrix } from "@/components/slides/Slide28_WhyMarketrix";
+import { Slide29_NextSteps } from "@/components/slides/Slide29_NextSteps";
+
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="w-full h-full bg-navy-900 overflow-hidden">
+      <PresentationController>
+        <Slide01_Cover />
+        <Slide02_Agenda />
+        <Slide03_SituationIntro />
+        <Slide04_Diagnosis />
+        <Slide05_Opportunity />
+        <Slide06_OperatingPrinciple />
+        <Slide07_EngineIntro />
+        <Slide08_SixPillarsOverview />
+        <Slide09_Pillar1_SEO />
+        <Slide10_Pillar1B_AEO />
+        <Slide11_Pillar2_LinkedIn />
+        <Slide12_Pillar3_B2BEmail />
+        <Slide13_AutomationStack />
+        <Slide14_Pillar4_Video />
+        <Slide15_SignatureAsset_BrandFilm />
+        <Slide16_Pillar5_Reviews />
+        <Slide17_Pillar6_PaidSocial />
+        <Slide18_LeadDelivery />
+        <Slide19_ExecutionIntro />
+        <Slide20_Roadmap />
+        <Slide21_Deliverables />
+        <Slide22_Measurement />
+        <Slide23_InvestmentIntro />
+        <Slide24_Phase1_Setup />
+        <Slide25_Phase2_Retainer />
+        <Slide26_Phase3_AddOns />
+        <Slide27_Commercials />
+        <Slide28_WhyMarketrix />
+        <Slide29_NextSteps />
+      </PresentationController>
+    </main>
   );
 }
