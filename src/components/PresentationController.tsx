@@ -138,16 +138,18 @@ export function PresentationController({ children }: PresentationControllerProps
         <button
           onClick={prevSlide}
           disabled={!mounted || currentSlide === 0}
+          suppressHydrationWarning
           className="pointer-events-auto text-slate-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
-        <span className="text-slate-200 font-bold text-sm tabular-nums tracking-widest">
+        <span suppressHydrationWarning className="text-slate-200 font-bold text-sm tabular-nums tracking-widest">
           {String(currentSlide + 1).padStart(2, '0')} / {String(totalSlides).padStart(2, '0')}
         </span>
         <button
           onClick={nextSlide}
           disabled={!mounted || currentSlide === totalSlides - 1}
+          suppressHydrationWarning
           className="pointer-events-auto text-slate-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
         >
           <ChevronRight className="w-6 h-6" />
