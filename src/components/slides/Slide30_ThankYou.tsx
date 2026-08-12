@@ -30,10 +30,10 @@ export function Slide30_ThankYou() {
 
   return (
     <div className="flex flex-col justify-center h-full w-full py-6 max-w-7xl mx-auto">
-      {/* Header with Prominent Marketrix Original Logo */}
+      {/* Header with Perfectly Proportioned Marketrix Original Logo */}
       <div className="mb-8 flex flex-col items-center text-center">
-        <div className="bg-black/90 backdrop-blur-md px-8 py-4 rounded-3xl border border-slate-800 shadow-glass mb-6">
-          <MarketrixLogo height={76} />
+        <div className="bg-black/90 backdrop-blur-md px-6 py-3 rounded-2xl border border-slate-800 shadow-glass mb-6">
+          <MarketrixLogo height={54} />
         </div>
         
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">Thank You — Let's Build Your Growth</h2>

@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { MarketrixLogo } from "@/components/ui/MarketrixLogo";
 import { SynergyLogo } from "@/components/ui/SynergyLogo";
 
@@ -12,37 +11,39 @@ interface PresentationControllerProps {
 
 export function PresentationController({ children }: PresentationControllerProps) {
   const totalSlides = React.Children.count(children);
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [mounted, setMounted] = useState<boolean>(false);
 
-  // Lazy initializer to read hash/localStorage synchronously before first render
-  const [currentSlide, setCurrentSlide] = useState<number>(() => {
-    if (typeof window === "undefined") return 0;
-    
+  const touchStartX = useRef<number | null>(null);
+
+  // Restore slide position from URL hash or localStorage ONLY on client mount (prevents SSR hydration mismatch)
+  useEffect(() => {
+    setMounted(true);
+    if (typeof window === "undefined") return;
+
     // 1. Check URL Hash (e.g. #slide-5)
     const hash = window.location.hash;
     if (hash && hash.startsWith("#slide-")) {
       const slideNum = parseInt(hash.replace("#slide-", ""), 10) - 1;
-      if (!isNaN(slideNum) && slideNum >= 0) {
-        return slideNum;
+      if (!isNaN(slideNum) && slideNum >= 0 && slideNum < totalSlides) {
+        setCurrentSlide(slideNum);
+        return;
       }
     }
-    
+
     // 2. Check localStorage
     try {
       const saved = localStorage.getItem("synergy_presentation_slide");
       if (saved !== null) {
         const slideNum = parseInt(saved, 10);
-        if (!isNaN(slideNum) && slideNum >= 0) {
-          return slideNum;
+        if (!isNaN(slideNum) && slideNum >= 0 && slideNum < totalSlides) {
+          setCurrentSlide(slideNum);
         }
       }
     } catch {
       // ignore SSR / storage errors
     }
-    
-    return 0;
-  });
-
-  const touchStartX = useRef<number | null>(null);
+  }, [totalSlides]);
 
   // Keep state bound within valid slide index range if totalSlides changes
   useEffect(() => {
@@ -51,16 +52,16 @@ export function PresentationController({ children }: PresentationControllerProps
     }
   }, [totalSlides, currentSlide]);
 
-  // Sync currentSlide to localStorage and URL Hash
+  // Sync currentSlide to localStorage and URL Hash after mounted
   useEffect(() => {
-    if (typeof window === "undefined") return;
+    if (!mounted || typeof window === "undefined") return;
     try {
       localStorage.setItem("synergy_presentation_slide", currentSlide.toString());
       window.history.replaceState(null, "", `#slide-${currentSlide + 1}`);
     } catch {
       // ignore
     }
-  }, [currentSlide]);
+  }, [currentSlide, mounted]);
 
   // Handle browser Hash change (e.g. back/forward button)
   useEffect(() => {
@@ -122,13 +123,13 @@ export function PresentationController({ children }: PresentationControllerProps
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Top Fixed Header with Larger Original Logos Left and Right */}
+      {/* Top Fixed Header with Perfectly Proportioned Original Logos */}
       <nav className="fixed top-0 left-0 w-full p-4 sm:p-6 flex justify-between items-center z-50 pointer-events-none">
-        <div className="pointer-events-auto flex items-center bg-black/90 backdrop-blur-md px-5 py-2.5 rounded-2xl border border-slate-800 shadow-glass">
-          <MarketrixLogo height={56} />
+        <div className="pointer-events-auto flex items-center bg-black/90 backdrop-blur-md px-4 py-2 rounded-2xl border border-slate-800 shadow-glass">
+          <MarketrixLogo height={40} />
         </div>
-        <div className="pointer-events-auto flex items-center bg-white/95 backdrop-blur-md px-5 py-2.5 rounded-2xl shadow-glass border border-slate-200">
-          <SynergyLogo height={46} />
+        <div className="pointer-events-auto flex items-center bg-white/95 backdrop-blur-md px-4 py-2 rounded-2xl shadow-glass border border-slate-200">
+          <SynergyLogo height={34} />
         </div>
       </nav>
 
@@ -136,7 +137,7 @@ export function PresentationController({ children }: PresentationControllerProps
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-4 z-50 pointer-events-none bg-slate-950/80 backdrop-blur-md px-6 py-3 rounded-full border border-slate-800 shadow-glass">
         <button
           onClick={prevSlide}
-          disabled={currentSlide === 0}
+          disabled={!mounted || currentSlide === 0}
           className="pointer-events-auto text-slate-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
         >
           <ChevronLeft className="w-6 h-6" />
@@ -146,7 +147,7 @@ export function PresentationController({ children }: PresentationControllerProps
         </span>
         <button
           onClick={nextSlide}
-          disabled={currentSlide === totalSlides - 1}
+          disabled={!mounted || currentSlide === totalSlides - 1}
           className="pointer-events-auto text-slate-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
         >
           <ChevronRight className="w-6 h-6" />
