@@ -8,8 +8,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Synergy CPA | Digital Growth & Lead Generation Engine",
-  description: "A 12-month plan to make Synergy CPA the most visible, most trusted finance partner in Scarborough and the wider GTA.",
+  title: "Proposal For The Synergy CPA",
+  description: "A 12-month digital growth plan presented by Marketrix Tech Nepal for Synergy CPA.",
 };
 
 export default function RootLayout({
