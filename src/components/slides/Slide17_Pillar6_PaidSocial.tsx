@@ -1,101 +1,138 @@
 import React from "react";
 import { SkeuomorphicCard } from "../ui/SkeuomorphicCard";
+import { DollarSign, Layers, TrendingUp, CheckCircle, Search, Share2, Sparkles, BarChart2, ShieldCheck } from "lucide-react";
 
 export function Slide17_Pillar6_PaidSocial() {
   return (
-    <div className="flex flex-col h-full w-full py-8">
-      <div className="mb-12">
-        <p className="text-metallic-blue tracking-widest text-sm font-semibold uppercase mb-4">Pillar 06</p>
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Paid social starts in Month 3 — and not before</h2>
-        <p className="text-slate-400 text-lg max-w-4xl">Sending paid traffic to an untracked page buys expensive data, not clients. Spend scales on proof, never on the calendar.</p>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 flex-grow items-center">
-        {/* Chart representation */}
-        <SkeuomorphicCard className="p-8 bg-white h-[400px] flex flex-col justify-end relative shadow-[inset_0_0_20px_rgba(0,0,0,0.05)]">
-          <p className="absolute top-8 left-1/2 -translate-x-1/2 font-bold text-navy-900 text-sm">Phased ad investment — Facebook & Instagram first</p>
-          
-          <div className="flex justify-between items-end h-[250px] w-full mt-auto relative z-10 px-4">
-            <div className="flex flex-col items-center gap-2">
-              <span className="text-xs text-slate-400">0</span>
-              <div className="w-10 md:w-16 h-0 bg-metallic-blue rounded-t" />
-              <span className="text-xs font-bold text-slate-500">M1</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <span className="text-xs text-slate-400">0</span>
-              <div className="w-10 md:w-16 h-0 bg-metallic-blue rounded-t" />
-              <span className="text-xs font-bold text-slate-500">M2</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <span className="text-xs text-slate-400">40k</span>
-              <div className="w-10 md:w-16 h-[80px] bg-metallic-blue rounded-t shadow-[inset_0_2px_10px_rgba(255,255,255,0.3)]" />
-              <span className="text-xs font-bold text-slate-500">M3</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <span className="text-xs text-slate-400">50k</span>
-              <div className="w-10 md:w-16 h-[100px] bg-metallic-blue rounded-t shadow-[inset_0_2px_10px_rgba(255,255,255,0.3)]" />
-              <span className="text-xs font-bold text-slate-500">M4</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <span className="text-xs text-slate-400">65k</span>
-              <div className="w-10 md:w-16 h-[130px] bg-metallic-blue rounded-t shadow-[inset_0_2px_10px_rgba(255,255,255,0.3)]" />
-              <span className="text-xs font-bold text-slate-500">M5</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <span className="text-xs text-slate-400">80k</span>
-              <div className="w-10 md:w-16 h-[160px] bg-metallic-blue rounded-t shadow-[inset_0_2px_10px_rgba(255,255,255,0.3)]" />
-              <span className="text-xs font-bold text-slate-500">M6</span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <span className="text-xs text-slate-400">110k</span>
-              <div className="w-10 md:w-16 h-[220px] bg-metallic-blue rounded-t shadow-[inset_0_2px_10px_rgba(255,255,255,0.3)]" />
-              <span className="text-xs font-bold text-slate-500">M7+</span>
-            </div>
-          </div>
-          <div className="absolute bottom-[30px] left-8 right-8 border-b border-slate-200" />
-        </SkeuomorphicCard>
-
-        {/* Phase Details */}
-        <div className="space-y-6">
-          <SkeuomorphicCard className="p-6 bg-white border border-slate-200">
-            <div className="flex justify-between items-center mb-2">
-              <h3 className="font-bold text-navy-900 text-sm">Months 1–2</h3>
-              <span className="text-slate-500 font-bold text-sm">Zero paid spend</span>
-            </div>
-            <p className="text-slate-500 text-sm leading-relaxed">Foundation, tracking and creative only. Nothing to spend against yet.</p>
-          </SkeuomorphicCard>
-          
-          <SkeuomorphicCard className="p-6 bg-white border border-slate-200">
-            <div className="flex justify-between items-center mb-2">
-              <h3 className="font-bold text-metallic-blue text-sm">Months 3–4</h3>
-              <span className="text-navy-900 font-bold text-sm">Facebook & Instagram launch</span>
-            </div>
-            <p className="text-slate-500 text-sm leading-relaxed">GTA geo-targeting, newcomer interest audiences, founder video as primary creative.</p>
-          </SkeuomorphicCard>
-          
-          <SkeuomorphicCard className="p-6 bg-white border border-slate-200">
-            <div className="flex justify-between items-center mb-2">
-              <h3 className="font-bold text-metallic-blue text-sm">Months 5–6</h3>
-              <span className="text-navy-900 font-bold text-sm">Retargeting layer</span>
-            </div>
-            <p className="text-slate-500 text-sm leading-relaxed">Pixel audiences re-engaged; only organically proven video gets boosted.</p>
-          </SkeuomorphicCard>
-          
-          <SkeuomorphicCard className="p-6 bg-white border border-slate-200">
-            <div className="flex justify-between items-center mb-2">
-              <h3 className="font-bold text-navy-900 text-sm">Month 7+</h3>
-              <span className="text-navy-900 font-bold text-sm">Google Search added</span>
-            </div>
-            <p className="text-slate-500 text-sm leading-relaxed">High-intent keyword campaigns, expanded once cost per lead holds steady.</p>
-          </SkeuomorphicCard>
-        </div>
-      </div>
-
-      <div className="mt-8 bg-navy-900 rounded-xl p-6 border border-slate-700 shadow-embossed">
-        <p className="text-white text-sm font-semibold leading-relaxed">
-          The gate: we only increase spend once the landing page converts at 3–5% and cost per qualified lead is known. Ad budget is paid directly to the platforms by Synergy CPA.
+    <div className="flex flex-col h-full w-full py-8 justify-between">
+      <div className="mb-8">
+        <p className="text-cyan-400 tracking-widest text-sm font-semibold uppercase mb-3">Step 06 · Paid Ad Boosting</p>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Targeted Ad Boosting After Month 3</h2>
+        <p className="text-slate-300 text-lg max-w-4xl">
+          Starting in Month 3, we begin boosting high-performing content across LinkedIn, Google, and Meta (Facebook &amp; Instagram) based on an agreed custom extra budget.
         </p>
       </div>
+
+      {/* 3 Main Strategy Cards with Intriguing Visual Graphics */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 flex-grow items-stretch my-auto">
+        
+        {/* Card 1: Months 1-2 Organic Testing */}
+        <SkeuomorphicCard interactive className="p-7 flex flex-col justify-between border border-slate-700/60 group">
+          <div>
+            {/* Visual Graphic Element */}
+            <div className="w-full h-24 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border border-slate-700/50 p-4 mb-6 flex flex-col justify-between relative overflow-hidden group-hover:border-cyan-500/40 transition-colors">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-bold text-cyan-400 uppercase tracking-widest bg-cyan-950/80 border border-cyan-500/30 px-2.5 py-0.5 rounded-full">
+                  Phase 01 · Validation
+                </span>
+                <span className="text-xs font-black text-emerald-400">$0 Ad Spend</span>
+              </div>
+              <div className="flex items-end gap-2 pt-2">
+                <div className="flex-1 bg-slate-800 rounded-full h-2 overflow-hidden border border-slate-700">
+                  <div className="bg-gradient-to-r from-cyan-400 to-emerald-400 h-full w-[85%]" />
+                </div>
+                <span className="text-[11px] font-bold text-slate-300">Organic</span>
+              </div>
+            </div>
+
+            <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+              <span>Months 1–2: Organic Testing</span>
+            </h3>
+            <p className="text-slate-300 text-sm leading-relaxed">
+              Zero initial ad spend. We set up profiles, publish organic posts, and identify which topics get the best engagement before spending a dollar.
+            </p>
+          </div>
+
+          <div className="pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+            <span>Spend Gate:</span>
+            <span className="text-cyan-400 font-semibold">100% Organic First</span>
+          </div>
+        </SkeuomorphicCard>
+
+        {/* Card 2: Month 3+ Custom Agreed Budget */}
+        <SkeuomorphicCard interactive className="p-7 flex flex-col justify-between border border-slate-700/60 group">
+          <div>
+            {/* Visual Graphic Element */}
+            <div className="w-full h-24 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border border-slate-700/50 p-4 mb-6 flex flex-col justify-between relative overflow-hidden group-hover:border-emerald-500/40 transition-colors">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest bg-emerald-950/80 border border-emerald-500/30 px-2.5 py-0.5 rounded-full">
+                  Phase 02 · Boosting
+                </span>
+                <span className="text-xs font-bold text-emerald-400">Month 3+</span>
+              </div>
+              <div className="flex items-center justify-between bg-slate-800/80 border border-slate-700/60 px-3 py-1.5 rounded-xl">
+                <span className="text-xs text-slate-300 font-medium">Custom Ad Budget:</span>
+                <span className="text-xs font-bold text-emerald-400">Agreed Amount</span>
+              </div>
+            </div>
+
+            <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+              <span>Month 3+: Agreed Budget</span>
+            </h3>
+            <p className="text-slate-300 text-sm leading-relaxed">
+              Starting in Month 3, upon your mutual agreement on an extra dollar budget, we launch paid boosting for maximum local reach.
+            </p>
+          </div>
+
+          <div className="pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+            <span>Approval:</span>
+            <span className="text-emerald-400 font-semibold">Mutual Agreement</span>
+          </div>
+        </SkeuomorphicCard>
+
+        {/* Card 3: Proper Multi-Channel Distribution */}
+        <SkeuomorphicCard interactive className="p-7 flex flex-col justify-between border border-slate-700/60 group">
+          <div>
+            {/* Visual Graphic Element */}
+            <div className="w-full h-24 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border border-slate-700/50 p-3.5 mb-6 flex flex-col justify-between relative overflow-hidden group-hover:border-cyan-500/40 transition-colors">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-bold text-cyan-400 uppercase tracking-widest bg-cyan-950/80 border border-cyan-500/30 px-2.5 py-0.5 rounded-full">
+                  Phase 03 · Distribution
+                </span>
+                <span className="text-xs font-bold text-slate-300">3 Ad Platforms</span>
+              </div>
+              <div className="flex items-center justify-between gap-1.5 pt-1">
+                <span className="flex-1 text-center py-1 rounded-lg bg-blue-950/80 border border-blue-500/40 text-[10px] font-bold text-blue-400">LinkedIn</span>
+                <span className="flex-1 text-center py-1 rounded-lg bg-amber-950/80 border border-amber-500/40 text-[10px] font-bold text-amber-400">Google</span>
+                <span className="flex-1 text-center py-1 rounded-lg bg-sky-950/80 border border-sky-500/40 text-[10px] font-bold text-sky-400">Meta</span>
+              </div>
+            </div>
+
+            <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
+              <span>Multi-Channel Distribution</span>
+            </h3>
+            <p className="text-slate-300 text-sm leading-relaxed">
+              Budget is allocated properly across LinkedIn Ads (b2b owners), Google Ads (search intent), and Meta Ads (Facebook &amp; Instagram).
+            </p>
+          </div>
+
+          <div className="pt-4 border-t border-slate-800 text-xs text-slate-400 flex items-center justify-between">
+            <span>Targeting:</span>
+            <span className="text-cyan-400 font-semibold">Local Business Owners</span>
+          </div>
+        </SkeuomorphicCard>
+
+      </div>
+
+      {/* Platforms & Agreed Budget Bar */}
+      <SkeuomorphicCard className="mt-8 p-6 flex flex-wrap justify-between gap-6 border border-slate-700/80 items-center">
+        <div className="flex items-baseline gap-2">
+          <span className="text-2xl font-bold text-cyan-400">Month 3</span>
+          <span className="text-slate-300 text-sm">boosting launch</span>
+        </div>
+        <div className="flex items-baseline gap-2">
+          <span className="text-2xl font-bold text-emerald-400">Custom $</span>
+          <span className="text-slate-300 text-sm">agreed extra budget</span>
+        </div>
+        <div className="flex items-baseline gap-2">
+          <span className="text-2xl font-bold text-cyan-400">3 Platforms</span>
+          <span className="text-slate-300 text-sm">LinkedIn · Google · Meta</span>
+        </div>
+        <div className="flex items-baseline gap-2">
+          <span className="text-2xl font-bold text-cyan-400">Targeted</span>
+          <span className="text-slate-300 text-sm">local owner reach</span>
+        </div>
+      </SkeuomorphicCard>
     </div>
   );
 }

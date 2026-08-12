@@ -4,18 +4,18 @@ import { Zap } from "lucide-react";
 
 export function Slide05_Opportunity() {
   const assets = [
-    { num: "3", title: "Credentialed founders", desc: "FCCA (UK) · CPA CGA (Canada) — visible expertise is the single strongest ranking and trust signal available to you." },
-    { num: "4", title: "Countries of experience", desc: "Canada, UK, UAE and Nepal — a cross-border story no competitor in Scarborough can copy." },
-    { num: "2", title: "High-value niches", desc: "Fractional CFO for growing businesses, and first-year tax for newcomers to Canada." },
-    { num: "11", title: "Service pages ready", desc: "Already written and live — they simply are not optimised, structured or interlinked yet." },
+    { num: "3", title: "Certified Founders", desc: "Qualified in Canada & UK — top accounting degrees that give clients total confidence." },
+    { num: "4", title: "Countries of Experience", desc: "Canada, UK, UAE, and Nepal — real global experience no competitor in Scarborough can match." },
+    { num: "2", title: "Special Focus Groups", desc: "Part-time CFO advice for growing businesses, and tax help for newcomers to Canada." },
+    { num: "11", title: "Live Service Pages", desc: "Your web pages are already published — we will format them so Google ranks them higher." },
   ];
 
   return (
     <div className="flex flex-col h-full w-full py-8 justify-center">
       <div className="mb-12">
         <p className="text-metallic-blue tracking-widest text-sm font-semibold uppercase mb-4">The Opportunity</p>
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">The raw material is already there</h2>
-        <p className="text-slate-400 text-lg max-w-4xl">None of the gaps above are positioning problems. Synergy CPA already has assets most firms in the GTA spend years trying to build.</p>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">You already have great strengths</h2>
+        <p className="text-slate-400 text-lg max-w-4xl">Synergy CPA already has amazing credentials that most accounting firms take years to build.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -33,8 +33,8 @@ export function Slide05_Opportunity() {
           <Zap className="w-6 h-6 text-metallic-blue" />
         </div>
         <div>
-          <h3 className="text-xl font-bold text-white mb-2">The problem is not what Synergy CPA is. It is that almost nobody can see it.</h3>
-          <p className="text-slate-400">Our entire job is converting existing credibility into visible, searchable, shareable proof — then routing the demand it creates into your pipeline.</p>
+          <h3 className="text-xl font-bold text-white mb-2">You have a great business. We just need to make sure everyone sees it.</h3>
+          <p className="text-slate-400">Our job is to put your experience on Google, social media, and YouTube so new clients discover you and call your team.</p>
         </div>
       </SkeuomorphicCard>
     </div>

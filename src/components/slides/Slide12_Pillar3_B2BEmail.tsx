@@ -1,55 +1,71 @@
 import React from "react";
 import { SkeuomorphicCard } from "../ui/SkeuomorphicCard";
-import { Filter, ShieldAlert, Send, Bookmark } from "lucide-react";
+import { UserCheck, MailCheck, TrendingUp, Send } from "lucide-react";
 
 export function Slide12_Pillar3_B2BEmail() {
   const blocks = [
-    { title: "List building & verification", desc: "Snov.io email finder against a defined ICP, then multi-tier verification. We hold bounce rate under 3% — above that, domains get burned.", icon: Filter },
-    { title: "Domain & mailbox warm-up", desc: "A dedicated sending domain with SPF, DKIM and DMARC configured, warmed over two weeks before a single prospect is contacted.", icon: ShieldAlert },
-    { title: "Five-touch sequences", desc: "Separate tracks for fractional CFO, newcomer tax and year-end compliance — each ending with a soft Coffee & Clarity invitation.", icon: Send },
-    { title: "Lead magnet & nurture", desc: "The 2026 Tax & Cash Flow Playbook as the gated hook, followed by an automated nurture track for everyone who downloads.", icon: Bookmark },
+    {
+      title: "Legal Lead Capture",
+      desc: "Collecting emails legally through website signup forms, blog subscriptions, newsletter forms, and tax guide downloads.",
+      icon: UserCheck
+    },
+    {
+      title: "Targeted Business Sourcing",
+      desc: "Finding and verifying email addresses of local business owners across Ontario using reliable B2B data tools.",
+      icon: MailCheck
+    },
+    {
+      title: "Safe 300/mo Start & Scaling",
+      desc: "Starting with 300 emails in Month 1 to protect your domain safety, then gradually scaling up as sender reputation builds.",
+      icon: TrendingUp
+    },
+    {
+      title: "Helpful Content & Offers",
+      desc: "Sending practical tax advice, business finance tips, and friendly invitations for a free consultation call.",
+      icon: Send
+    },
   ];
 
   return (
     <div className="flex flex-col h-full w-full py-8">
-      <div className="mb-12">
-        <p className="text-metallic-blue tracking-widest text-sm font-semibold uppercase mb-4">Pillar 03</p>
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">B2B email that reaches the inbox</h2>
-        <p className="text-slate-400 text-lg max-w-4xl">Cold email fails on deliverability far more often than on copy. We treat the technical setup as the campaign.</p>
+      <div className="mb-10">
+        <p className="text-cyan-400 tracking-widest text-sm font-semibold uppercase mb-3">Step 03</p>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">Legal &amp; Targeted Email Marketing</h2>
+        <p className="text-slate-300 text-lg max-w-4xl">We collect verified emails legally, start with a safe volume of 300 emails a month, and gradually scale up to bring you consistent client inquiries.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 flex-grow mb-8">
         {blocks.map((block, i) => (
-          <SkeuomorphicCard key={i} className="p-8 flex gap-6 items-start bg-white border border-slate-200 shadow-[inset_0_0_20px_rgba(0,0,0,0.02)]">
-            <div className="w-12 h-12 rounded-full border border-metallic-blue/20 bg-metallic-blue/5 flex items-center justify-center shrink-0">
-              <block.icon className="w-5 h-5 text-metallic-blue" />
+          <SkeuomorphicCard key={i} interactive className="p-8 flex gap-6 items-start border border-slate-700/60">
+            <div className="w-12 h-12 rounded-2xl border border-cyan-500/30 bg-cyan-500/10 flex items-center justify-center shrink-0 shadow-embossed">
+              <block.icon className="w-6 h-6 text-cyan-400" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-navy-900 mb-3">{block.title}</h3>
-              <p className="text-slate-600 leading-relaxed text-sm">{block.desc}</p>
+              <h3 className="text-xl font-bold text-white mb-2">{block.title}</h3>
+              <p className="text-slate-300 leading-relaxed text-sm">{block.desc}</p>
             </div>
           </SkeuomorphicCard>
         ))}
       </div>
 
-      <div className="bg-navy-900 rounded-xl p-6 flex flex-wrap justify-between gap-6 border border-slate-700 shadow-embossed items-center">
+      <SkeuomorphicCard className="p-6 flex flex-wrap justify-between gap-6 border border-slate-700/80 items-center">
         <div className="flex items-baseline gap-2">
-          <span className="text-2xl font-bold text-metallic-blue">1,000–1,500</span>
-          <span className="text-slate-400 text-sm">verified contacts / month</span>
+          <span className="text-2xl font-bold text-cyan-400">300 / mo</span>
+          <span className="text-slate-300 text-sm">start volume in Month 1</span>
         </div>
         <div className="flex items-baseline gap-2">
-          <span className="text-2xl font-bold text-metallic-blue">5</span>
-          <span className="text-slate-400 text-sm">touches per sequence</span>
+          <span className="text-2xl font-bold text-cyan-400">Gradual</span>
+          <span className="text-slate-300 text-sm">monthly scaling</span>
         </div>
         <div className="flex items-baseline gap-2">
-          <span className="text-2xl font-bold text-metallic-blue">&lt;3%</span>
-          <span className="text-slate-400 text-sm">bounce rate ceiling</span>
+          <span className="text-2xl font-bold text-cyan-400">100% Legal</span>
+          <span className="text-slate-300 text-sm">opt-in &amp; verified contacts</span>
         </div>
         <div className="flex items-baseline gap-2">
-          <span className="text-2xl font-bold text-metallic-blue">24h</span>
-          <span className="text-slate-400 text-sm">reply-to-CRM routing</span>
+          <span className="text-2xl font-bold text-cyan-400">Primary</span>
+          <span className="text-slate-300 text-sm">inbox delivery</span>
         </div>
-      </div>
+      </SkeuomorphicCard>
     </div>
   );
 }

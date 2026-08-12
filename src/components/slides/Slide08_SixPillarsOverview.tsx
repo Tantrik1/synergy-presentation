@@ -4,20 +4,20 @@ import { Globe, Briefcase, Mail, Video, Star, Megaphone } from "lucide-react";
 
 export function Slide08_SixPillarsOverview() {
   const pillars = [
-    { num: "01", title: "Website SEO & AEO", desc: "Technical fixes, 11 optimised service pages, schema, local landing pages and AI-answer formatting.", icon: Globe, primary: true },
-    { num: "02", title: "LinkedIn Authority", desc: "Founder-led posting plus automated, targeted outreach to GTA decision-makers via Snov.io.", icon: Briefcase, primary: true },
-    { num: "03", title: "B2B Email Outreach", desc: "Verified ICP lists, warmed domains and five-touch sequences that book consults, not opens.", icon: Mail, primary: false },
-    { num: "04", title: "Social & Video", desc: "Four videos every month, each cut into Reels, Shorts, LinkedIn native and quote graphics.", icon: Video, primary: false },
-    { num: "05", title: "Reviews & Trust", desc: "GBP, Bing Places, directories, review workflow and a testimonial engine that travels.", icon: Star, primary: false },
-    { num: "06", title: "Paid Social — Month 3+", desc: "Facebook and Instagram targeting, launched only once tracking proves the funnel converts.", icon: Megaphone, primary: false },
+    { num: "01", title: "Google Search & AI Answers", desc: "Updating web pages so people find you first on Google and ChatGPT.", icon: Globe, primary: true },
+    { num: "02", title: "LinkedIn Posts & Messages", desc: "Sharing expert advice and sending friendly messages to local business owners.", icon: Briefcase, primary: true },
+    { num: "03", title: "Helpful Email Outreach", desc: "Sending verified, friendly email messages to business owners to book calls.", icon: Mail, primary: false },
+    { num: "04", title: "Videos & Social Media", desc: "4 short videos every month shared on Reels, Shorts, and social channels.", icon: Video, primary: false },
+    { num: "05", title: "5-Star Reviews & Trust", desc: "Setting up Google reviews so prospective clients trust your team instantly.", icon: Star, primary: false },
+    { num: "06", title: "Online Ads (Month 3+)", desc: "Facebook and Instagram ads launched once we confirm the website converts well.", icon: Megaphone, primary: false },
   ];
 
   return (
     <div className="flex flex-col h-full w-full py-8">
       <div className="mb-12">
-        <p className="text-metallic-blue tracking-widest text-sm font-semibold uppercase mb-4">The Engine</p>
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Six pillars, two of them carrying the weight</h2>
-        <p className="text-slate-400 text-lg max-w-4xl">Website SEO and LinkedIn are the primary growth channels. Everything else feeds, proves or amplifies them.</p>
+        <p className="text-metallic-blue tracking-widest text-sm font-semibold uppercase mb-4">The Growth Steps</p>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">6 simple steps to get more clients</h2>
+        <p className="text-slate-400 text-lg max-w-4xl">Google Search and LinkedIn bring in the most inquiries. The other 4 steps support and grow them.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -34,7 +34,7 @@ export function Slide08_SixPillarsOverview() {
                 <span className="text-4xl font-bold text-slate-700/50">{pillar.num}</span>
                 {pillar.primary && (
                   <span className="px-3 py-1 text-[10px] font-bold tracking-widest uppercase bg-metallic-blue text-white rounded-full shadow-embossed">
-                    Primary
+                    Main Step
                   </span>
                 )}
               </div>

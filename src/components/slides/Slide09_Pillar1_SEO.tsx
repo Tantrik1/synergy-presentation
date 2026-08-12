@@ -3,18 +3,18 @@ import { SkeuomorphicCard } from "../ui/SkeuomorphicCard";
 
 export function Slide09_Pillar1_SEO() {
   const points = [
-    { num: "1", title: "Technical foundation", desc: "Core Web Vitals, crawl and indexation fixes, XML sitemap, and full schema markup — Organization, LocalBusiness, Person and FAQPage." },
-    { num: "2", title: "On-page optimisation", desc: "All 11 service pages expanded to 600–900 words with process, FAQ and CTA. Unique titles and meta descriptions; duplicate H1s removed." },
-    { num: "3", title: "Local search dominance", desc: "Dedicated geo landing pages for Scarborough and the GTA, plus citations across CPA Ontario, BBB, Clutch, chambers and newcomer organisations." },
-    { num: "4", title: "Two content silos", desc: "Fractional CFO & advisory, and newcomer & cross-border tax — four supporting posts a month, interlinked back to pillar pages." },
-    { num: "5", title: "Conversion layer", desc: "Click-to-call in the header, embedded booking calendar on Coffee & Clarity, and a persistent trust bar with credentials and reviews." },
+    { num: "1", title: "Fast & Healthy Website", desc: "Making your website load fast on mobile and desktop so Google ranks it high." },
+    { num: "2", title: "Clear Service Pages", desc: "Rewriting 11 service pages with simple questions, clear answers, and easy booking buttons." },
+    { num: "3", title: "Local Scarborough Focus", desc: "Creating dedicated pages for Scarborough & GTA so local searchers find you immediately." },
+    { num: "4", title: "4 Helpful Articles a Month", desc: "Publishing short articles on tax tips and CFO advice that answer real client questions." },
+    { num: "5", title: "Easy Tap-to-Call Buttons", desc: "Adding instant phone call buttons, online booking calendars, and 5-star trust badges." },
   ];
 
   return (
     <div className="flex flex-col h-full w-full py-8">
       <div className="mb-12">
-        <p className="text-metallic-blue tracking-widest text-sm font-semibold uppercase mb-4">Pillar 01 · Primary Channel</p>
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Website SEO: the only channel that compounds</h2>
+        <p className="text-metallic-blue tracking-widest text-sm font-semibold uppercase mb-4">Step 01 · Main Channel</p>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Google Search: your 24/7 client getter</h2>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-12 flex-grow">
@@ -45,9 +45,9 @@ export function Slide09_Pillar1_SEO() {
               </div>
             </div>
             <div className="p-8">
-              <h4 className="text-2xl font-bold text-navy-900 mb-6">Fractional CFO & Tax Advisory<br/>for Growing Canadian Businesses</h4>
+              <h4 className="text-2xl font-bold text-navy-900 mb-6">Part-Time CFO & Tax Advisory<br/>for Growing Canadian Businesses</h4>
               <div className="flex gap-4 mb-8">
-                <div className="px-6 py-2 bg-metallic-blue text-white font-bold rounded-lg text-sm">Book a call</div>
+                <div className="px-6 py-2 bg-metallic-blue text-white font-bold rounded-lg text-sm">Book a Call</div>
                 <div className="px-6 py-2 border border-slate-300 text-slate-700 font-bold rounded-lg text-sm">+1 (416) ••• ••••</div>
               </div>
               <div className="flex gap-4 mb-8 text-xs font-bold text-slate-500">
@@ -64,9 +64,9 @@ export function Slide09_Pillar1_SEO() {
           </SkeuomorphicCard>
 
           <SkeuomorphicCard className="p-8 bg-navy-900 border border-slate-700 mt-auto">
-            <h3 className="text-xl font-bold text-white mb-3">Why SEO leads this plan</h3>
+            <h3 className="text-xl font-bold text-white mb-3">Why Google Search comes first</h3>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Ads stop the day you stop paying. A ranked page, a schema-marked FAQ and a five-star profile keep working every month afterwards — which is why we build them before we spend a rupee on media.
+              Paid ads stop the day you stop paying. A well-built website page stays on Google forever and keeps bringing free visitors month after month.
             </p>
           </SkeuomorphicCard>
         </div>

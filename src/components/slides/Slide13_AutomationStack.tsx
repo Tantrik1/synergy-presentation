@@ -4,20 +4,20 @@ import { Search, ShieldCheck, Flame, Repeat, Target, Database, ArrowRight, Lock 
 
 export function Slide13_AutomationStack() {
   const steps = [
-    { num: "01", title: "Find", desc: "ICP search and email finder builds the target list", icon: Search },
-    { num: "02", title: "Verify", desc: "Multi-tier verification strips invalid and risky addresses", icon: ShieldCheck },
-    { num: "03", title: "Warm", desc: "Domain and mailbox warm-up protects deliverability", icon: Flame },
-    { num: "04", title: "Sequence", desc: "Email and LinkedIn touches fire on one shared schedule", icon: Repeat },
-    { num: "05", title: "Score", desc: "Opens, clicks and replies scored against intent signals", icon: Target },
-    { num: "06", title: "Route", desc: "Qualified lead pushed to your CRM with full context", icon: Database, primary: true },
+    { num: "01", title: "Find", desc: "Finding local business owners who need accounting advice", icon: Search },
+    { num: "02", title: "Clean", desc: "Checking email addresses so messages reach real people", icon: ShieldCheck },
+    { num: "03", title: "Prepare", desc: "Warming up email accounts so messages land in main inboxes", icon: Flame },
+    { num: "04", title: "Send", desc: "Sending friendly emails and LinkedIn notes on schedule", icon: Repeat },
+    { num: "05", title: "Check", desc: "Seeing who reads, clicks, or asks for more information", icon: Target },
+    { num: "06", title: "Deliver", desc: "Forwarding interested clients straight to your team", icon: Database, primary: true },
   ];
 
   return (
     <div className="flex flex-col h-full w-full py-8">
       <div className="mb-12">
-        <p className="text-metallic-blue tracking-widest text-sm font-semibold uppercase mb-4">The Automation Stack</p>
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">How Snov.io turns a name into a booked conversation</h2>
-        <p className="text-slate-400 text-lg max-w-4xl">One platform runs LinkedIn outreach and email sequencing side by side, so a prospect gets a coherent sequence rather than two disconnected pitches.</p>
+        <p className="text-metallic-blue tracking-widest text-sm font-semibold uppercase mb-4">The 6-Step System</p>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">How We Turn Local Contacts into Consultation Calls</h2>
+        <p className="text-slate-400 text-lg max-w-4xl">A clear 6-step process that works quietly in the background to connect with local business leaders.</p>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-4 items-center justify-between flex-grow mb-8 overflow-x-auto pb-4 custom-scrollbar">
@@ -46,8 +46,8 @@ export function Slide13_AutomationStack() {
           <Lock className="w-5 h-5 text-metallic-blue" />
         </div>
         <div>
-          <h3 className="text-lg font-bold text-white mb-2">Your data, your accounts</h3>
-          <p className="text-slate-400 text-sm">Every tool is provisioned under Synergy CPA ownership. If we ever part ways, the domains, sequences, lists and CRM data stay with you — nothing is held hostage in an agency account.</p>
+          <h3 className="text-lg font-bold text-white mb-2">You Own Everything 100%</h3>
+          <p className="text-slate-400 text-sm">All setup, contact lists, email domains, and accounts are 100% owned by Synergy CPA. Everything stays with you permanently.</p>
         </div>
       </SkeuomorphicCard>
     </div>

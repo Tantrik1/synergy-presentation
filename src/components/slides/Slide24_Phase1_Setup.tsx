@@ -1,68 +1,131 @@
 import React from "react";
 import { SkeuomorphicCard } from "../ui/SkeuomorphicCard";
+import { Check, Search, MapPin, Share2, Video } from "lucide-react";
 
 export function Slide24_Phase1_Setup() {
-  const tasks = [
-    { category: "Strategy", items: ["Kickoff & goal alignment", "ICP definition & messaging matrix", "Keyword research & content calendar"] },
-    { category: "Infrastructure", items: ["Snov.io workspace setup", "Cold email domain warmup", "CRM / HubSpot integrations"] },
-    { category: "Digital Assets", items: ["Website technical audit & fixes", "Google Business Profile optimization", "LinkedIn profile makeovers (3x founders)"] },
-    { category: "Creative", items: ["Brand film shoot & edit", "First batch of social graphics", "Email sequence copywriting"] }
+  const steps = [
+    {
+      num: "01",
+      week: "Week 1",
+      category: "Website SEO, AEO & Meta Tags",
+      icon: Search,
+      color: "text-cyan-400",
+      tagBg: "bg-cyan-950/80 text-cyan-400 border-cyan-500/30",
+      items: [
+        "Website SEO & Answer Engine Optimization (AEO)",
+        "Meta tags, OpenGraph & schema markup setup",
+        "Meta pixel, LinkedIn insight & GA4 tracking connected",
+        "Initial SEO blog architecture setup"
+      ]
+    },
+    {
+      num: "02",
+      week: "Week 2",
+      category: "Google Business & Reviews Engine",
+      icon: MapPin,
+      color: "text-sky-400",
+      tagBg: "bg-sky-950/80 text-sky-400 border-sky-500/30",
+      items: [
+        "Google Business Profile & Bing Places claim & optimization",
+        "Automated Google Review request workflow active",
+        "Local business directory citations setup"
+      ]
+    },
+    {
+      num: "03",
+      week: "Week 3",
+      category: "Social Media & LinkedIn Profiles",
+      icon: Share2,
+      color: "text-emerald-400",
+      tagBg: "bg-emerald-950/80 text-emerald-400 border-emerald-500/30",
+      items: [
+        "Social media channels setup (IG, FB, YT Shorts)",
+        "Founder LinkedIn profiles complete makeover",
+        "Branded social graphic templates ready"
+      ]
+    },
+    {
+      num: "04",
+      week: "Week 4",
+      category: "Rs. 30,000 Signature Brand Video",
+      icon: Video,
+      color: "text-amber-400",
+      tagBg: "bg-amber-950/80 text-amber-400 border-amber-500/30",
+      items: [
+        "Scripting, shoot & HD editing for Brand Film",
+        "3 short cut-down video Reels created",
+        "Featured on homepage, social media & ads"
+      ]
+    }
   ];
 
   return (
-    <div className="flex flex-col h-full w-full py-8">
-      <div className="flex flex-col lg:flex-row gap-12 h-full">
-        <div className="flex-1 flex flex-col">
-          <p className="text-metallic-blue tracking-widest text-sm font-semibold uppercase mb-4">Phase 1</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Setup & Engine Build</h2>
-          <p className="text-slate-400 text-lg leading-relaxed mb-8">
-            The first 30 days are dedicated exclusively to building the foundation. We don't launch outreach or publish content until the infrastructure is perfect.
-          </p>
-
-          <SkeuomorphicCard className="p-8 bg-navy-900 border border-slate-700 mt-auto">
-            <p className="text-slate-400 text-sm font-semibold uppercase tracking-wider mb-2">One-time investment</p>
-            <div className="flex items-baseline gap-4 mb-4">
-              <span className="text-5xl font-bold text-white">Rs. 1,40,000</span>
-            </div>
-            <div className="w-full bg-slate-800 rounded-full h-3 mb-4 shadow-pressed">
-              <div className="bg-metallic-blue h-3 rounded-full w-1/2"></div>
-            </div>
-            <div className="flex justify-between text-xs font-bold text-slate-500 uppercase">
-              <span>50% at signing</span>
-              <span>50% at day 30</span>
-            </div>
-          </SkeuomorphicCard>
+    <div className="flex flex-col justify-center h-full w-full py-6 max-w-7xl mx-auto relative">
+      {/* Title and Price in ONE Row */}
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 pb-5 border-b border-slate-800">
+        <div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Phase 1 · Complete Setup</h2>
         </div>
 
-        <div className="flex-[1.2] flex flex-col">
-          <SkeuomorphicCard className="h-full bg-white p-8 overflow-y-auto">
-            <h3 className="text-2xl font-bold text-navy-900 mb-8">The 30-Day Build</h3>
-            
-            <div className="space-y-8 relative before:absolute before:inset-0 before:ml-4 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-200 before:to-transparent">
-              {tasks.map((task, index) => (
-                <div key={index} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-                  {/* Icon */}
-                  <div className="flex items-center justify-center w-8 h-8 rounded-full border border-white bg-slate-200 text-slate-500 group-[.is-active]:bg-metallic-blue group-[.is-active]:text-white shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
-                    <span className="text-xs font-bold">{index + 1}</span>
-                  </div>
-                  
-                  {/* Card */}
-                  <div className="w-[calc(100%-3rem)] md:w-[calc(50%-2rem)] p-5 rounded-xl border border-slate-100 bg-slate-50 shadow-sm">
-                    <h4 className="font-bold text-navy-900 mb-3">{task.category}</h4>
-                    <ul className="space-y-2">
-                      {task.items.map((item, i) => (
-                         <li key={i} className="text-sm text-slate-600 flex items-start gap-2">
-                           <span className="text-metallic-blue mt-0.5">•</span>
-                           <span>{item}</span>
-                         </li>
-                      ))}
-                    </ul>
-                  </div>
+        {/* Price Tag in Same Row */}
+        <div className="flex items-center gap-4 bg-slate-900/90 border border-slate-700/80 px-6 py-3.5 rounded-2xl shrink-0 shadow-glass">
+          <div>
+            <p className="text-[10px] text-cyan-400 font-bold uppercase tracking-widest">All-Inclusive Setup</p>
+            <p className="text-3xl font-extrabold text-white">Rs. 1,40,000</p>
+          </div>
+          <div className="pl-4 border-l border-slate-800 text-[11px] text-slate-300">
+            Includes <span className="text-amber-400 font-bold">Rs. 30k Brand Film</span>
+          </div>
+        </div>
+      </div>
+
+      <p className="text-slate-300 text-base max-w-5xl leading-relaxed mb-6">
+        Complete setup covering website SEO, AEO, meta tags, pixels, Google Business Profile, social media, founder LinkedIn, and your Rs. 30k Signature Brand Video.
+      </p>
+
+      {/* 4 Equal Setup Cards in a Clean Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch mb-4">
+        {steps.map((step, index) => (
+          <SkeuomorphicCard key={index} interactive className="p-5 border border-slate-700/60 flex flex-col justify-between group">
+            <div>
+              {/* Header */}
+              <div className="flex items-center justify-between mb-3.5">
+                <span className={`text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full border ${step.tagBg}`}>
+                  {step.week}
+                </span>
+                <div className={`w-8 h-8 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center ${step.color}`}>
+                  <step.icon className="w-4 h-4" />
                 </div>
-              ))}
+              </div>
+
+              <h4 className="font-bold text-white text-sm mb-2.5 flex items-center gap-1.5">
+                <span className="text-slate-400 font-mono text-xs">{step.num}.</span>
+                <span>{step.category}</span>
+              </h4>
+
+              <ul className="space-y-2">
+                {step.items.map((item, i) => (
+                  <li key={i} className="text-xs text-slate-300 flex items-start gap-2 leading-relaxed">
+                    <Check className={`w-3.5 h-3.5 shrink-0 mt-0.5 ${step.color}`} />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mt-4 pt-2.5 border-t border-slate-800 text-[10px] font-semibold text-slate-400 flex items-center justify-between">
+              <span>Status:</span>
+              <span className={step.color}>Ready by {step.week}</span>
             </div>
           </SkeuomorphicCard>
-        </div>
+        ))}
+      </div>
+
+      {/* Bottom Right VAT Notice */}
+      <div className="flex justify-end pt-2">
+        <span className="text-[11px] text-slate-400 font-semibold italic bg-slate-900/60 border border-slate-800 px-3 py-1 rounded-lg">
+          * All prices exclude 13% VAT
+        </span>
       </div>
     </div>
   );

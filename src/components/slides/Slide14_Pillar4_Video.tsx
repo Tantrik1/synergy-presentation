@@ -1,95 +1,132 @@
 import React from "react";
 import { SkeuomorphicCard } from "../ui/SkeuomorphicCard";
-import { Mic, Clock, MessageCircle, Users, Play, Smartphone, PlaySquare, Briefcase, Globe } from "lucide-react";
+import { Video, Share2, Sparkles, Play, Volume2 } from "lucide-react";
 
 export function Slide14_Pillar4_Video() {
-  const formats = [
-    { title: "Ask the CPA", desc: "A founder answers one real client question in plain language.", icon: Mic },
-    { title: "Deadline & compliance", desc: "CRA dates, filing changes, what it means for a business owner.", icon: Clock },
-    { title: "Myth-buster / client story", desc: "An anonymised lesson from a real engagement.", icon: MessageCircle },
-    { title: "Newcomer focus", desc: "First-year Canada questions, spoken to the community directly.", icon: Users },
-  ];
-
-  const channels = [
-    { title: "Instagram + Facebook Reel", icon: Smartphone },
-    { title: "YouTube Short", icon: PlaySquare },
-    { title: "LinkedIn native video", icon: Briefcase },
-    { title: "Website FAQ / blog entry", icon: Globe },
+  const highlights = [
+    {
+      title: "4 Short Video Reels Per Month",
+      desc: "One quick monthly recording turned into 4 high-quality, professional video Reels.",
+      icon: Video
+    },
+    {
+      title: "Posted Across All Social Media",
+      desc: "Published automatically across Instagram, Facebook, YouTube Shorts, and LinkedIn.",
+      icon: Share2
+    },
+    {
+      title: "Engaging & Brand-Consistent",
+      desc: "Custom subtitles, sleek graphics, and tax insights that build instant client trust.",
+      icon: Sparkles
+    }
   ];
 
   return (
-    <div className="flex flex-col h-full w-full py-8">
-      <div className="mb-12">
-        <p className="text-metallic-blue tracking-widest text-sm font-semibold uppercase mb-4">Pillar 04</p>
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Four videos a month, sixteen-plus placements</h2>
-        <p className="text-slate-400 text-lg max-w-4xl">One short recording session per week produces a month of content across every channel. Consistency beats production polish in this format.</p>
-      </div>
+    <div className="flex flex-col h-full w-full py-4 justify-between">
+      {/* 2-Column Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center flex-grow">
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 flex-grow">
-        {/* Left Column */}
-        <div className="col-span-1 lg:col-span-1 flex flex-col gap-4">
-          <p className="text-metallic-blue tracking-widest text-xs font-bold uppercase mb-2">The Monthly Slate</p>
-          {formats.map((format, i) => (
-            <SkeuomorphicCard key={i} className="p-5 flex gap-4 items-center bg-white border border-slate-200 shadow-sm">
-              <div className="w-10 h-10 rounded-full border border-metallic-blue/20 bg-metallic-blue/5 flex items-center justify-center shrink-0">
-                <format.icon className="w-5 h-5 text-metallic-blue" />
-              </div>
-              <div>
-                <h4 className="font-bold text-navy-900 text-sm mb-1">{format.title}</h4>
-                <p className="text-slate-500 text-xs">{format.desc}</p>
-              </div>
-            </SkeuomorphicCard>
-          ))}
-        </div>
-
-        {/* Center Phone Mockup */}
-        <div className="col-span-1 flex items-center justify-center py-4">
-          <div className="w-[280px] h-[580px] bg-navy-900 rounded-[40px] border-[12px] border-slate-800 shadow-[inset_0_0_20px_rgba(0,0,0,0.8),_0_20px_40px_rgba(0,0,0,0.5)] relative overflow-hidden flex flex-col">
-            <div className="absolute top-0 w-full h-8 flex justify-center pt-2 z-10">
-              <div className="w-24 h-4 bg-slate-800 rounded-full" />
-            </div>
-            
-            <div className="flex-1 bg-gradient-to-br from-slate-800 to-navy-900 flex flex-col items-center justify-center p-6 relative">
-              <div className="w-16 h-16 bg-metallic-blue rounded-full shadow-embossed flex items-center justify-center mb-8 ml-2 cursor-pointer hover:bg-sky-400 transition-colors">
-                <Play className="w-6 h-6 text-white fill-current" />
-              </div>
-              
-              <div className="text-center w-full">
-                <p className="text-metallic-blue text-[10px] font-bold tracking-widest uppercase mb-2">Ask the CPA</p>
-                <h3 className="text-white font-bold text-xl leading-tight">"Do I really need<br/>a CFO yet?"</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Right Column */}
-        <div className="col-span-1 flex flex-col justify-center gap-8">
+        {/* Left Column - Clean Wording & Highlights */}
+        <div className="lg:col-span-8 flex flex-col justify-center gap-5">
           <div>
-            <p className="text-metallic-blue tracking-widest text-xs font-bold uppercase mb-4">Every Video Becomes</p>
-            <div className="space-y-6">
-              {channels.map((ch, i) => (
-                <div key={i} className="flex gap-4 items-center">
-                  <div className="w-8 h-8 rounded-full bg-slate-700 flex items-center justify-center shadow-pressed shrink-0">
-                    <ch.icon className="w-4 h-4 text-metallic-blue" />
-                  </div>
-                  <span className="text-slate-300 text-sm font-medium">{ch.title}</span>
+            <p className="text-cyan-400 tracking-widest text-xs font-semibold uppercase mb-2">Step 04 · Video Content Engine</p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight">
+              4 Short Video Reels a Month, <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-emerald-400">
+                Posted Across All Social Media
+              </span>
+            </h2>
+            <p className="text-slate-300 text-base max-w-2xl leading-relaxed">
+              We produce engaging video content to maintain brand consistency, build client trust, and keep Synergy CPA top-of-mind.
+            </p>
+          </div>
+
+          {/* 3 High-Impact Cards */}
+          <div className="space-y-3">
+            {highlights.map((item, i) => (
+              <SkeuomorphicCard key={i} interactive className="p-4 flex gap-4 items-center border border-slate-700/60">
+                <div className="w-10 h-10 rounded-xl border border-cyan-500/30 bg-cyan-500/10 flex items-center justify-center shrink-0 shadow-embossed">
+                  <item.icon className="w-5 h-5 text-cyan-400" />
                 </div>
+                <div>
+                  <h3 className="font-bold text-white text-base mb-0.5">{item.title}</h3>
+                  <p className="text-slate-300 text-xs leading-relaxed">{item.desc}</p>
+                </div>
+              </SkeuomorphicCard>
+            ))}
+          </div>
+
+          {/* Platforms Bar */}
+          <div className="flex items-center gap-3 pt-1">
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Distributed To:</span>
+            <div className="flex flex-wrap gap-2">
+              {["Instagram Reels", "YouTube Shorts", "Facebook", "LinkedIn", "Tiktok", "Twitter"].map((platform, idx) => (
+                <span key={idx} className="px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700/60 text-cyan-400 text-xs font-medium">
+                  {platform}
+                </span>
               ))}
             </div>
           </div>
-          
-          <SkeuomorphicCard className="p-6 bg-navy-900 border border-slate-700 flex items-center gap-6">
-            <div className="text-4xl font-bold text-metallic-blue drop-shadow-md">16+</div>
-            <div className="text-sm text-slate-300">placements a month<br/>from 4 recordings</div>
-          </SkeuomorphicCard>
         </div>
-      </div>
-      
-      <div className="mt-8 text-sm font-semibold text-slate-300 bg-slate-800/50 p-4 rounded-xl text-center border border-slate-700/50">
-        <span className="text-slate-400">Steady-state cadence: </span> 
-        LinkedIn 3–4× / week <span className="mx-2 text-slate-600">·</span> 
-        Reels 2–3× / week <span className="mx-2 text-slate-600">·</span> 
-        Blog + newsletter every two weeks
+
+        {/* Right Column - Perfectly Proportioned & Centered iPhone */}
+        <div className="lg:col-span-4 flex items-center justify-center py-2">
+          {/* Authentic iPhone 16 Pro Ratio (210px x 380px) */}
+          <div className="relative w-[240px] h-[500px] bg-slate-900 rounded-[38px] p-[6px] border-[4px] border-slate-600/80 shadow-[0_20px_50px_rgba(0,0,0,0.7)]">
+
+            {/* Inner Screen */}
+            <div className="w-full h-full rounded-[32px] bg-slate-950 overflow-hidden relative flex flex-col justify-between p-3 border border-slate-800">
+
+              {/* Dynamic Island Notch */}
+              <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-18 h-4 bg-black rounded-full z-30 border border-slate-800/80" />
+
+              {/* Ambient Glow */}
+              <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 bg-cyan-500/20 rounded-full blur-2xl pointer-events-none" />
+
+              {/* Reel Header */}
+              <div className="flex items-center justify-between z-10 pt-3">
+                <div className="flex items-center gap-1.5 bg-slate-900/90 backdrop-blur-md px-2 py-0.5 rounded-full border border-slate-700/60">
+                  <div className="w-3.5 h-3.5 rounded-full bg-emerald-500 flex items-center justify-center font-bold text-slate-950 text-[8px]">
+                    S
+                  </div>
+                  <span className="text-[10px] font-bold text-white">Synergy CPA</span>
+                </div>
+                <div className="w-6 h-6 rounded-full bg-slate-900/90 flex items-center justify-center border border-slate-700/60 text-cyan-400">
+                  <Volume2 className="w-3 h-3" />
+                </div>
+              </div>
+
+              {/* Center Play Button & Title */}
+              <div className="flex flex-col items-center text-center z-10 my-auto">
+                <div className="relative group cursor-pointer mb-3">
+                  <div className="absolute -inset-1.5 bg-cyan-400/30 rounded-full blur-md animate-pulse" />
+                  <div className="w-12 h-12 bg-slate-900/90 border-2 border-cyan-400 rounded-full flex items-center justify-center relative z-10 shadow-glass">
+                    <Play className="w-5 h-5 text-cyan-400 fill-current ml-0.5" />
+                  </div>
+                </div>
+
+                <div className="bg-slate-900/90 backdrop-blur-md p-2.5 rounded-xl border border-cyan-500/30">
+                  <span className="text-[9px] font-extrabold text-cyan-400 uppercase tracking-widest block mb-1">
+                    🔥 Monthly Reel
+                  </span>
+                  <h3 className="text-white font-bold text-xs leading-snug drop-shadow-md">
+                    "3 Smart Tax Moves for Business Owners"
+                  </h3>
+                </div>
+              </div>
+
+              {/* Footer & iPhone Home Bar */}
+              <div className="z-10 text-center pt-1 border-t border-slate-800/80">
+                <p className="text-[9px] text-cyan-400 font-bold mb-1">
+                  4 Video Reels / Month
+                </p>
+                <div className="w-20 h-1 bg-white/40 rounded-full mx-auto" />
+              </div>
+
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );

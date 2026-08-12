@@ -1,5 +1,4 @@
 import React from "react";
-import { Calendar } from "lucide-react";
 
 export function Slide19_ExecutionIntro() {
   return (
@@ -17,10 +16,6 @@ export function Slide19_ExecutionIntro() {
         <p className="text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed mt-6">
           What gets built when, what you receive every month, and the numbers we will be judged on.
         </p>
-      </div>
-
-      <div className="absolute right-12 md:right-32 top-1/2 -translate-y-1/2 hidden md:flex items-center justify-center w-64 h-64 rounded-full bg-slate-800 shadow-embossed border border-slate-700/50">
-        <Calendar className="w-24 h-24 text-metallic-blue" />
       </div>
     </div>
   );

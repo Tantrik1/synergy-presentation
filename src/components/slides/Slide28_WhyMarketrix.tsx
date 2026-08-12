@@ -1,52 +1,61 @@
 import React from "react";
 import { SkeuomorphicCard } from "../ui/SkeuomorphicCard";
-import { Check } from "lucide-react";
+import { Check, ShieldCheck, Layers, Target } from "lucide-react";
 
 export function Slide28_WhyMarketrix() {
   return (
-    <div className="flex flex-col h-full w-full py-8">
-      <div className="mb-12">
-        <p className="text-metallic-blue tracking-widest text-sm font-semibold uppercase mb-4">Partner Selection</p>
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Why Marketrix?</h2>
+    <div className="flex flex-col h-full w-full py-8 justify-between">
+      <div className="mb-8">
+        <p className="text-cyan-400 tracking-widest text-sm font-semibold uppercase mb-3">Partner Selection</p>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">Why Work With Marketrix Tech Nepal?</h2>
+        <p className="text-slate-300 text-lg max-w-4xl">
+          We combine local market execution with international digital growth standards to build a reliable client pipeline for Synergy CPA.
+        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 flex-grow">
-        <SkeuomorphicCard className="p-8 bg-white border border-slate-200">
-          <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mb-6 shadow-pressed">
-            <span className="text-xl font-bold text-navy-900">1</span>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 flex-grow items-stretch my-auto">
+        <SkeuomorphicCard interactive className="p-8 border border-slate-700/60 flex flex-col justify-between">
+          <div>
+            <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-bold flex items-center justify-center mb-6 shadow-embossed">
+              <ShieldCheck className="w-6 h-6" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-3">Accounting Industry Specialists</h3>
+            <p className="text-slate-300 leading-relaxed text-sm">
+              We understand accounting, tax advisory, and Canadian business client expectations. We know what your ideal client cares about and how to communicate your expertise with total authority.
+            </p>
           </div>
-          <h3 className="text-2xl font-bold text-navy-900 mb-4">Specialists, not generalists</h3>
-          <p className="text-slate-600 leading-relaxed mb-6">
-            We don't build ecommerce sites for sneaker brands on Tuesday and CPA firms on Wednesday. We understand the regulatory environment you operate in, the difference between bookkeeping and advisory, and what your ideal client actually cares about.
-          </p>
         </SkeuomorphicCard>
 
-        <SkeuomorphicCard className="p-8 bg-white border border-slate-200">
-          <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mb-6 shadow-pressed">
-            <span className="text-xl font-bold text-navy-900">2</span>
+        <SkeuomorphicCard interactive className="p-8 border border-slate-700/60 flex flex-col justify-between">
+          <div>
+            <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-bold flex items-center justify-center mb-6 shadow-embossed">
+              <Layers className="w-6 h-6" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-3">A Complete Growth System</h3>
+            <p className="text-slate-300 leading-relaxed text-sm">
+              General agencies sell isolated services (just SEO or just emails). We build the entire integrated growth engine — SEO, LinkedIn, Video Reels, Reviews, and Email outreach — working together seamlessly.
+            </p>
           </div>
-          <h3 className="text-2xl font-bold text-navy-900 mb-4">A complete ecosystem</h3>
-          <p className="text-slate-600 leading-relaxed mb-6">
-            Most agencies sell you the one thing they are good at — SEO, or ads, or email. But an email without a credible LinkedIn profile fails. An ad sending traffic to a slow website fails. We build the entire engine because these pieces only work together.
-          </p>
         </SkeuomorphicCard>
 
-        <SkeuomorphicCard className="p-8 bg-white border border-slate-200">
-          <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mb-6 shadow-pressed">
-            <span className="text-xl font-bold text-navy-900">3</span>
+        <SkeuomorphicCard interactive className="p-8 border border-slate-700/60 flex flex-col justify-between">
+          <div>
+            <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-bold flex items-center justify-center mb-6 shadow-embossed">
+              <Target className="w-6 h-6" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-3">Real Business Results</h3>
+            <p className="text-slate-300 leading-relaxed text-sm">
+              No vanity metrics or hiding behind impressions. We track and report on real pipeline growth: phone calls, form messages, and qualified consultation meetings booked for your founders.
+            </p>
           </div>
-          <h3 className="text-2xl font-bold text-navy-900 mb-4">No vanity metrics</h3>
-          <p className="text-slate-600 leading-relaxed mb-6">
-            We won't send you a report celebrating "impressions" if the phone didn't ring. We measure our success on one metric: qualified conversations generated for your partners.
-          </p>
         </SkeuomorphicCard>
 
-        <SkeuomorphicCard className="p-8 bg-navy-900 border border-slate-700 flex flex-col justify-center items-center text-center">
-          <div className="w-16 h-16 rounded-full bg-metallic-blue flex items-center justify-center mb-6 shadow-embossed">
-            <Check className="w-8 h-8 text-white" />
+        <SkeuomorphicCard className="p-8 border border-cyan-500/40 bg-gradient-to-br from-cyan-950/60 via-slate-900 to-slate-950 flex flex-col justify-center items-center text-center">
+          <div className="w-16 h-16 rounded-full bg-cyan-500/20 border border-cyan-400/40 text-cyan-400 flex items-center justify-center mb-6 shadow-embossed">
+            <Check className="w-8 h-8" />
           </div>
-          <h3 className="text-2xl font-bold text-white mb-2">Ready to build?</h3>
-          <p className="text-slate-400">Move to the final slide to schedule your kickoff.</p>
+          <h3 className="text-2xl font-bold text-white mb-2">Ready to Grow?</h3>
+          <p className="text-slate-300 text-sm">Move to the next slide to review our 3 simple onboarding steps.</p>
         </SkeuomorphicCard>
       </div>
     </div>

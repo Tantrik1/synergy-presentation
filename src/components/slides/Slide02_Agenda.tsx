@@ -4,19 +4,19 @@ import { Search, Layers, Database, Calendar, BarChart2, CreditCard } from "lucid
 
 export function Slide02_Agenda() {
   const agendaItems = [
-    { num: "01", title: "The Situation", desc: "What our audit of thesynergycpa.com found — and the opportunity sitting underneath it.", icon: Search },
-    { num: "02", title: "The Growth Engine", desc: "Six pillars: SEO, LinkedIn, B2B email, video, trust and paid — built in sequence.", icon: Layers },
-    { num: "03", title: "Lead Delivery", desc: "How every qualified lead reaches your CRM, and exactly where our scope ends.", icon: Database },
-    { num: "04", title: "Execution & Timeline", desc: "A 12-month roadmap with monthly deliverables you can hold us to.", icon: Calendar },
-    { num: "05", title: "Measurement", desc: "The KPIs we report on and the numbers that gate every budget increase.", icon: BarChart2 },
-    { num: "06", title: "Investment & Terms", desc: "Setup, retainer options, add-ons and the recurring payment plan.", icon: CreditCard },
+    { num: "01", title: "Where You Are Today", desc: "What we found on your website, what is missing, and the big growth opportunity.", icon: Search },
+    { num: "02", title: "The 6 Growth Steps", desc: "Google search, LinkedIn, helpful emails, short videos, reviews, and smart ads.", icon: Layers },
+    { num: "03", title: "How You Get Leads", desc: "How interested business owners get sent straight to your team with zero extra work.", icon: Database },
+    { num: "04", title: "Month-by-Month Plan", desc: "A clear 12-month timeline showing what we deliver for you every single month.", icon: Calendar },
+    { num: "05", title: "Checking Our Success", desc: "Simple numbers we track together, like website visitors, leads, and booked calls.", icon: BarChart2 },
+    { num: "06", title: "Simple Pricing", desc: "Clear monthly packages and setup options so you always know your costs.", icon: CreditCard },
   ];
 
   return (
     <div className="flex flex-col h-full w-full py-8">
       <div className="mb-12">
         <p className="text-metallic-blue tracking-widest text-sm font-semibold uppercase mb-4">Agenda</p>
-        <h2 className="text-4xl md:text-5xl font-bold text-white">What we will cover in the next 20 minutes</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-white">What we will cover together</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 flex-grow">

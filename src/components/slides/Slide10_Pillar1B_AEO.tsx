@@ -6,16 +6,16 @@ export function Slide10_Pillar1B_AEO() {
   return (
     <div className="flex flex-col h-full w-full py-8">
       <div className="mb-12">
-        <p className="text-metallic-blue tracking-widest text-sm font-semibold uppercase mb-4">Pillar 01B · Answer Engine Optimisation</p>
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Being the answer, not just a result</h2>
-        <p className="text-slate-400 text-lg max-w-4xl">A growing share of "should I hire a fractional CFO?" research now happens inside AI chat, never touching a search results page. Content has to be written to be quoted.</p>
+        <p className="text-metallic-blue tracking-widest text-sm font-semibold uppercase mb-4">Step 01B · AI Assistant Visibility</p>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Getting Recommended by AI Search Tools</h2>
+        <p className="text-slate-400 text-lg max-w-4xl">Many business owners ask ChatGPT or Google AI for advice like 'Who is the best accountant in Scarborough?' We make sure AI recommends Synergy CPA.</p>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         {[
           { name: "ChatGPT", icon: MessageSquare },
-          { name: "Google AI Overviews", icon: Search },
-          { name: "Perplexity", icon: RefreshCcw },
+          { name: "Google AI", icon: Search },
+          { name: "Perplexity AI", icon: RefreshCcw },
           { name: "Microsoft Copilot", icon: Cpu }
         ].map((engine, i) => (
           <SkeuomorphicCard key={i} className="p-6 flex items-center justify-center gap-3">
@@ -31,14 +31,14 @@ export function Slide10_Pillar1B_AEO() {
             <div className="w-8 h-8 rounded-full bg-slate-700 shadow-pressed flex items-center justify-center">
               <span className="text-metallic-blue">✍️</span>
             </div>
-            How we write for AI answers
+            How we format web pages for AI
           </h3>
           <ul className="space-y-5">
             {[
-              "Answer-first format — a direct two-sentence answer, then the detail",
-              "FAQ blocks with FAQPage schema on every service page and cornerstone post",
-              "CPA credentials shown under every byline, not just on the Team page",
-              "Identical name, address, phone and services across web, GBP, Bing and LinkedIn"
+              "Direct Answers First — 2 clear sentences at the top of every page so AI can quote you",
+              "Common Questions — simple Question & Answer sections on every service page",
+              "Founder Qualifications — showing your CPA degree clearly on every page",
+              "Matching Contact Info — keeping name, address, and phone number identical across the web"
             ].map((item, i) => (
               <li key={i} className="flex gap-4 text-slate-300 items-start">
                 <CheckCircle2 className="w-5 h-5 text-metallic-blue shrink-0 mt-0.5" />
@@ -52,12 +52,12 @@ export function Slide10_Pillar1B_AEO() {
           <div className="w-16 h-16 rounded-2xl bg-slate-700 shadow-embossed flex items-center justify-center mb-6">
             <RefreshCcw className="w-8 h-8 text-metallic-blue" />
           </div>
-          <h3 className="text-xl font-bold text-white mb-4">The monthly AI visibility audit</h3>
+          <h3 className="text-xl font-bold text-white mb-4">Monthly AI Recommendation Check</h3>
           <p className="text-slate-400 text-sm leading-relaxed mb-6">
-            Every month we ask all four engines the questions your buyers actually ask — "best fractional CFO in Scarborough", "first year tax filing new to Canada" — and record whether Synergy CPA is named, cited or absent.
+            Every month we test common questions inside ChatGPT and Google AI — like 'best part-time CFO in Scarborough' or 'tax help for newcomers to Canada' — to check if Synergy CPA gets recommended.
           </p>
           <p className="text-metallic-blue font-bold text-sm">
-            Content that is not surfacing gets rewritten that month. It is a measurable channel, not a buzzword.
+            If an AI tool does not recommend Synergy CPA, we update the page until it does.
           </p>
         </SkeuomorphicCard>
       </div>
